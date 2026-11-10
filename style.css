@@ -1,0 +1,74 @@
+/* Rolagem suave ao clicar no menu */
+html { scroll-behavior: smooth; }
+
+.secao {
+  padding: 110px 0 70px;   /* espaço para o menu fixo */
+  min-height: 60vh;
+}
+
+.titulo-secao {
+  font-weight: 700;
+  position: relative;
+}
+.titulo-secao::after {          /* linha decorativa abaixo do título */
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0dcaf0;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Avatar com as iniciais */
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0dcaf0, #6f42c1);
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ===== RECURSO NOVO 1: barras de habilidade animadas ===== */
+.progress { height: 14px; }
+.progress-bar {
+  width: 0;                         /* começa vazia */
+  transition: width 1.5s ease-out;  /* enche devagar */
+}
+.bg-purple   { background-color: #6f42c1 !important; }
+.text-purple { color: #6f42c1; }
+
+/* ===== RECURSO NOVO 2: elementos aparecem ao rolar a página ===== */
+.revelar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.revelar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RECURSO NOVO 3: hover nos cards de projeto ===== */
+.card-projeto {
+  transition: transform .3s, box-shadow .3s;
+  border-top: 4px solid #0dcaf0;
+}
+.card-projeto:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+/* Slides do carousel com fundo em degradê (sem precisar de imagem) */
+.carousel-item { height: 320px; }
+.slide-1 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.slide-2 { background: linear-gradient(135deg, #0dcaf0, #0d6efd); }
+.slide-3 { background: linear-gradient(135deg, #6f42c1, #d63384); }
+.carousel-caption { bottom: 30%; }
+.carousel-caption h3 { font-weight: 700; text-shadow: 0 2px 6px rgba(0,0,0,.3); }
