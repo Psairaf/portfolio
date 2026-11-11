@@ -15,7 +15,7 @@ Portfólio pessoal para apresentação profissional. Reúne meu perfil, minhas h
 - GitHub Pages (hospedagem)
 
 ## Link do site publicado
-https://anasouza.github.io/portfolio/
+https://psairaf.github.io/portfolio/
 
 ## Como o projeto funciona
 - **Menu de navegação** fixo no topo (`navbar` do Bootstrap). Cada link leva a uma seção pelo `id` (`#perfil`, `#habilidades`, `#projetos`, `#contato`). No celular, o menu vira um botão "hambúrguer" e fecha sozinho após o clique.
